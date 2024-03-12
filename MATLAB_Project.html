@@ -1,0 +1,324 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>MATLAB Project_Rolle</title><meta name="generator" content="MATLAB 9.14"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2024-03-12"><meta name="DC.source" content="MATLAB_Project.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; }
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+span.typesection { color:#A0522D }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>MATLAB Project_Rolle</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">INTRODUCTION</a></li><li><a href="#2">TABLES &amp; Graphs: General Info</a></li><li><a href="#3">Continue: Logical Function</a></li><li><a href="#4">Information tailored to them..(Menus)</a></li><li><a href="#5">Function table</a></li></ul></div><h2 id="1">INTRODUCTION</h2><pre class="codeinput">disp(<span class="string">'You live in the heart of California....'</span>)
+pause(2)
+disp(<span class="string">"Which is known for it's traffic and potential accidents.."</span>)
+pause(2)
+disp(<span class="string">"You have a fear of getting into a car crash.."</span>)
+pause(2)
+disp(<span class="string">'This program will inform you on which factors increase your likeihood of getting into an accident.'</span>)
+pause(2)
+disp(<span class="string">'Enjoy ;)'</span>)
+pause (10)
+</pre><pre class="codeoutput">You live in the heart of California....
+Which is known for it's traffic and potential accidents..
+You have a fear of getting into a car crash..
+This program will inform you on which factors increase your likeihood of getting into an accident.
+Enjoy ;)
+</pre><h2 id="2">TABLES &amp; Graphs: General Info</h2><pre class="codeinput">clear;clc;
+
+data = load(<span class="string">"Download_1st_Data_for_MATLAB_Project-traffic-crashes.mat"</span>);
+data = data.trafficcrashes1;
+data.Properties.VariableNames{<span class="string">'V1_Driver_'</span>}=<span class="string">'Age'</span>;
+data.Properties.VariableNames{<span class="string">'V1_Type'</span>}=<span class="string">'Vehicle_Type'</span>;
+data.Properties.VariableNames{<span class="string">'Factors_Ro'</span>}=<span class="string">'Road_Cond'</span>;
+data.Properties.VariableNames{<span class="string">'Distance'</span>}=<span class="string">'Length_of_Hazard_Area'</span>;
+rows = data(:,[9 21 41 19 42 12]);<span class="comment">%Display Info in Table</span>
+head(rows,5)
+pause(20)
+
+<span class="comment">%Age</span>
+age= rows(:,2);
+A1=table2array(age);
+subplot(2,2,1)
+histogram(A1,6),title(<span class="string">'Age of Driver'</span>)
+<span class="comment">%Road_Cond</span>
+A2=rows(:,3);
+aa2=table2array(A2);
+Road_Cond=categorical(aa2);
+summary(Road_Cond);
+subplot(2,2,2)
+histogram(Road_Cond), title(<span class="string">'Road Condition'</span>)
+<span class="comment">%Weather</span>
+A4= rows(:,6);
+aa4=table2array(A4);
+weather=categorical(aa4);
+subplot(2,2,3)
+histogram(weather), title(<span class="string">'Weather Condition'</span>)
+<span class="comment">%Sun</span>
+A5= rows(:,5);
+aa5=table2array(A5);
+sun=categorical(aa5);
+subplot(2,2,4)
+histogram(sun), title(<span class="string">'Light'</span>)
+hold <span class="string">off</span>
+pause(20)
+
+<span class="comment">%Distance</span>
+figure(2)
+distance= rows(:,1); <span class="comment">%12720 rows(accidents)</span>
+A6=table2array(distance);
+x=1:12720;
+y=A6;
+plot(x,y,x,mean(A6),<span class="string">'ko'</span>);title(<span class="string">'Distance of Accident'</span>);ylabel(<span class="string">'Distance(m)'</span>);
+text(6000,1000,<span class="string">'Average= 247.44'</span>)
+hold <span class="string">off</span>
+<span class="comment">%Table of Distance</span>
+pause(10)
+b=mode(A6);c=mean(A6);d=min(A6);e=max(A6);
+disp(<span class="string">'Description of Length(m) of All Accidents Reported'</span>)
+disp(<span class="string">'     Mode       Mean          Min        Max'</span>)
+disp({b,c,d,e})
+pause(5)
+</pre><pre class="codeoutput">    Length_of_Hazard_Area    Age    Road_Cond      Vehicle_Type                Lighting             Weather
+    _____________________    ___    _________    _________________    __________________________    _______
+
+              15             49        DRY       HATCHBACK, 4 DOOR    DAYLIGHT                       CLEAR 
+               0             22        DRY       SEDAN, 4 DOOR        DARK - NO LIGHTING             CLEAR 
+             195             22        DRY       SEDAN, 2 DOOR        DARK - CONTINUOUS LIGHTING     CLEAR 
+             500              0        WET       SEDAN                DARK - SPOT LIGHTING           CLEAR 
+               0             27        DRY       SEDAN, 4 DOOR        DARK - NO LIGHTING             CLEAR 
+
+     DRY          10315 
+     ICE              1 
+     NA            1354 
+     OTHER            1 
+     SNOW             1 
+     UNKNOWN          1 
+     WET           1047 
+Description of Length(m) of All Accidents Reported
+     Mode       Mean          Min        Max
+    {[0]}    {[247.4438]}    {[0]}    {[5800]}
+
+</pre><img vspace="5" hspace="5" src="MATLAB_Project_01.png" alt=""> <img vspace="5" hspace="5" src="MATLAB_Project_02.png" alt=""> <h2 id="3">Continue: Logical Function</h2><pre class="codeinput">disp(<span class="string">'This information may be overwhelming...'</span>)
+pause(3)
+play=input(<span class="string">"Would you like the data to be tailored to you? '1' for yes or '0' for no? \n"</span>);
+<span class="keyword">while</span> play&lt;1 <span class="comment">%%Loop</span>
+    <span class="keyword">if</span> play==1
+        <span class="keyword">break</span>
+    <span class="keyword">elseif</span> play==0
+        msg=<span class="string">'End of Program Exit Now'</span>
+       assert(error(msg))
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+</pre><pre class="codeoutput">This information may be overwhelming...
+</pre><pre class="codeoutput error">Error using input
+Cannot call INPUT from EVALC.
+
+Error in MATLAB_Project (line 76)
+play=input("Would you like the data to be tailored to you? '1' for yes or '0' for no? \n");
+</pre><h2 id="4">Information tailored to them..(Menus)</h2><p>Age Menu</p><pre class="codeinput">age= rows(:,2);
+A1=table2array(age);
+young_adult=100-length(find(A1&lt;18 | A1&gt;29))/length(A1)*100;
+middle_age=100-length(find(A1&lt;30 | A1&gt;45))/length(A1)*100;
+middle_age2=100-length(find(A1&lt;46 | A1&gt;59))/length(A1)*100;
+old_adult=100-length(find(A1&lt;60 | A1&gt;100))/length(A1)*100;
+age_group={young_adult middle_age middle_age2 old_adult};
+age1=menu(<span class="string">'How old are you?'</span>,<span class="string">'18-29'</span>,<span class="string">'20-45'</span>,<span class="string">'46-59'</span>,<span class="string">'60-100'</span>);
+disp(<span class="string">'This is percentage is how likely you are to get into an accident:'</span>)
+disp(age_group(age1))
+</pre><h2 id="5">Function table</h2><pre class="codeinput"><span class="keyword">function</span> data_table()
+clear;clc;
+
+data = load(<span class="string">"Download_1st_Data_for_MATLAB_Project-traffic-crashes.mat"</span>);
+data = data.trafficcrashes1;
+data.Properties.VariableNames{<span class="string">'V1_Driver_'</span>}=<span class="string">'Age'</span>;
+data.Properties.VariableNames{<span class="string">'V1_Type'</span>}=<span class="string">'Vehicle_Type'</span>;
+data.Properties.VariableNames{<span class="string">'Factors_Ro'</span>}=<span class="string">'Road_Cond'</span>;
+data.Properties.VariableNames{<span class="string">'Distance'</span>}=<span class="string">'Length_of_Hazard_Area'</span>;
+rows = data(:,[9 21 41 19 42 12])<span class="comment">%Display Info in Table</span>
+
+<span class="keyword">return</span>
+<span class="keyword">end</span>
+</pre><p class="footer"><br><a href="https://urldefense.com/v3/__https://www.mathworks.com/products/matlab/__;!!IaT_gp1N!1UOPuliN3jRcq8-AMlmj1BnbxNgMsq8VwZj0Q8x73v9r7HdBccIispM03g2Iortn_NBYqGbqHFOzSpoUzu0hZVo$">Published with MATLAB&reg; R2023a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% MATLAB Project_Rolle
+
+%% INTRODUCTION
+disp('You live in the heart of California....') 
+pause(2)
+disp("Which is known for it's traffic and potential accidents..")
+pause(2)
+disp("You have a fear of getting into a car crash..")
+pause(2)
+disp('This program will inform you on which factors increase your likeihood of getting into an accident.') 
+pause(2)
+disp('Enjoy ;)')
+pause (10)
+
+%% TABLES & Graphs: General Info
+clear;clc;
+
+data = load("Download_1st_Data_for_MATLAB_Project-traffic-crashes.mat");
+data = data.trafficcrashes1;
+data.Properties.VariableNames{'V1_Driver_'}='Age';
+data.Properties.VariableNames{'V1_Type'}='Vehicle_Type';
+data.Properties.VariableNames{'Factors_Ro'}='Road_Cond';
+data.Properties.VariableNames{'Distance'}='Length_of_Hazard_Area';
+rows = data(:,[9 21 41 19 42 12]);%Display Info in Table
+head(rows,5)
+pause(20)
+
+%Age
+age= rows(:,2);
+A1=table2array(age);
+subplot(2,2,1)
+histogram(A1,6),title('Age of Driver')
+%Road_Cond
+A2=rows(:,3);
+aa2=table2array(A2);
+Road_Cond=categorical(aa2);
+summary(Road_Cond);
+subplot(2,2,2)
+histogram(Road_Cond), title('Road Condition')
+%Weather
+A4= rows(:,6);
+aa4=table2array(A4);
+weather=categorical(aa4);
+subplot(2,2,3)
+histogram(weather), title('Weather Condition')
+%Sun
+A5= rows(:,5);
+aa5=table2array(A5);
+sun=categorical(aa5);
+subplot(2,2,4)
+histogram(sun), title('Light')
+hold off
+pause(20)
+
+%Distance
+figure(2)
+distance= rows(:,1); %12720 rows(accidents)
+A6=table2array(distance);
+x=1:12720;
+y=A6;
+plot(x,y,x,mean(A6),'ko');title('Distance of Accident');ylabel('Distance(m)');
+text(6000,1000,'Average= 247.44')
+hold off
+%Table of Distance
+pause(10)
+b=mode(A6);c=mean(A6);d=min(A6);e=max(A6);
+disp('Description of Length(m) of All Accidents Reported')
+disp('     Mode       Mean          Min        Max')
+disp({b,c,d,e})
+pause(5)
+
+
+%% Continue: Logical Function
+disp('This information may be overwhelming...')
+pause(3)
+play=input("Would you like the data to be tailored to you? '1' for yes or '0' for no? \n");
+while play<1 %%Loop
+    if play==1
+        break
+    elseif play==0
+        msg='End of Program Exit Now'
+       assert(error(msg))
+    end
+end
+%% Information tailored to them..(Menus)
+% Age Menu
+age= rows(:,2);
+A1=table2array(age);
+young_adult=100-length(find(A1<18 | A1>29))/length(A1)*100;
+middle_age=100-length(find(A1<30 | A1>45))/length(A1)*100;
+middle_age2=100-length(find(A1<46 | A1>59))/length(A1)*100;
+old_adult=100-length(find(A1<60 | A1>100))/length(A1)*100;
+age_group={young_adult middle_age middle_age2 old_adult};
+age1=menu('How old are you?','18-29','20-45','46-59','60-100');
+disp('This is percentage is how likely you are to get into an accident:')
+disp(age_group(age1))
+
+
+
+
+
+
+
+
+
+%% Function table
+function data_table()
+clear;clc;
+
+data = load("Download_1st_Data_for_MATLAB_Project-traffic-crashes.mat");
+data = data.trafficcrashes1;
+data.Properties.VariableNames{'V1_Driver_'}='Age';
+data.Properties.VariableNames{'V1_Type'}='Vehicle_Type';
+data.Properties.VariableNames{'Factors_Ro'}='Road_Cond';
+data.Properties.VariableNames{'Distance'}='Length_of_Hazard_Area';
+rows = data(:,[9 21 41 19 42 12])%Display Info in Table
+
+return
+end
+
+
+##### SOURCE END #####
+--></body></html>
